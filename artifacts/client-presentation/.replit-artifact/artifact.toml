@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/client-presentation/"
+title = "Client Presentation"
+version = "1.0.0"
+id = "artifacts/client-presentation"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/client-presentation/" ]
+localPort = 25784
+
+[services.development]
+run = "pnpm --filter @workspace/client-presentation run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/client-presentation", "run", "build" ]
+publicDir = "artifacts/client-presentation/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "25784"
+BASE_PATH = "/client-presentation/"
