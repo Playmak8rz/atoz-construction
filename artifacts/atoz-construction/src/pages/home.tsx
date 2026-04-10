@@ -117,7 +117,7 @@ export default function Home() {
                 </Link>
               </Button>
               <Button asChild size="lg" variant="outline" className="bg-white/10 hover:bg-white/20 text-white border-white/30 font-bold h-14 px-8 text-lg rounded-sm uppercase tracking-wide w-full sm:w-auto backdrop-blur-sm group">
-                <a href="tel:2125550199" data-testid="btn-hero-call">
+                <a href="tel:+12125550199" data-testid="btn-hero-call">
                   <PhoneCall className="mr-2 w-5 h-5" /> Call Now
                 </a>
               </Button>
