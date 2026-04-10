@@ -105,7 +105,7 @@ export default function Services() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.6 }}
-                className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${index % 2 !== 0 ? 'lg:flex-row-reverse' : ''}`}
+                className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
               >
                 <div className={`order-2 ${index % 2 !== 0 ? 'lg:order-1' : 'lg:order-2'}`}>
                   <div className="relative h-[400px] md:h-[500px] rounded-sm overflow-hidden group">

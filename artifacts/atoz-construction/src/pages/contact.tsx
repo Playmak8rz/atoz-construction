@@ -18,6 +18,28 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
+import { useMemo } from "react";
+
+const serviceOptions = [
+  { value: "general", label: "General Contracting" },
+  { value: "renovations", label: "Renovations & Remodeling" },
+  { value: "masonry", label: "Masonry & Concrete" },
+  { value: "roofing", label: "Roofing" },
+  { value: "kitchen", label: "Kitchen Remodeling" },
+  { value: "bathroom", label: "Bathroom Remodeling" },
+  { value: "demolition", label: "Demolition" },
+  { value: "painting", label: "Painting" },
+  { value: "drywall", label: "Drywall" },
+  { value: "flooring", label: "Flooring" },
+  { value: "framing", label: "Framing" },
+  { value: "exterior", label: "Exterior Work" },
+  { value: "electrical", label: "Electrical" },
+  { value: "plumbing", label: "Plumbing" },
+  { value: "hvac", label: "HVAC Systems" },
+  { value: "project-management", label: "Project Management" },
+  { value: "consultation", label: "General Consultation" },
+  { value: "other", label: "Other" },
+];
 
 const formSchema = z.object({
   name: z.string().min(2, "Name is required"),
@@ -29,6 +51,12 @@ const formSchema = z.object({
 
 export default function Contact() {
   const { toast } = useToast();
+
+  const initialService = useMemo(() => {
+    const params = new URLSearchParams(window.location.search);
+    const svc = params.get("service") || "";
+    return serviceOptions.some((o) => o.value === svc) ? svc : "";
+  }, []);
   
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -36,7 +64,7 @@ export default function Contact() {
       name: "",
       email: "",
       phone: "",
-      service: "",
+      service: initialService,
       message: "",
     },
   });
@@ -199,12 +227,9 @@ export default function Contact() {
                               </SelectTrigger>
                             </FormControl>
                             <SelectContent>
-                              <SelectItem value="general">General Contracting</SelectItem>
-                              <SelectItem value="renovation">Gut Renovation</SelectItem>
-                              <SelectItem value="masonry">Masonry & Concrete</SelectItem>
-                              <SelectItem value="interior">Interior Finishes</SelectItem>
-                              <SelectItem value="roofing">Roofing</SelectItem>
-                              <SelectItem value="other">Other</SelectItem>
+                              {serviceOptions.map((opt) => (
+                                <SelectItem key={opt.value} value={opt.value}>{opt.label}</SelectItem>
+                              ))}
                             </SelectContent>
                           </Select>
                           <FormMessage />
