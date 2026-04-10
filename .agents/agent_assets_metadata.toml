@@ -1,0 +1,50 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "1PDlw9N8OzduZj0N_2Y1Z"
+uri = "file://artifacts/atoz-construction/public/images/hero.png"
+type = "image"
+title = "Hero steel frame Manhattan"
+
+[[generated]]
+id = "dsE8f4ve2I6N2y__W0tD8"
+uri = "file://artifacts/atoz-construction/public/images/project-penthouse.png"
+type = "image"
+title = "Luxury penthouse construction"
+
+[[generated]]
+id = "lP1910WUN9jJsm80ZzWWK"
+uri = "file://artifacts/atoz-construction/public/images/project-brownstone.png"
+type = "image"
+title = "Brooklyn brownstone restoration"
+
+[[generated]]
+id = "4zSXoGV5t8wXrnsdIG_q6"
+uri = "file://artifacts/atoz-construction/public/images/project-commercial.png"
+type = "image"
+title = "Commercial lobby construction"
+
+[[generated]]
+id = "Y6pUCwBonh2oHl7EQZBzP"
+uri = "file://artifacts/atoz-construction/public/images/service-masonry.png"
+type = "image"
+title = "Masonry detail work"
+
+[[generated]]
+id = "mIGuTHzggtVVOb3yShnnQ"
+uri = "file://artifacts/atoz-construction/public/images/service-concrete.png"
+type = "image"
+title = "Concrete pouring"
+
+[[generated]]
+id = "5SPoPWBNMQGkaHB_Le3OW"
+uri = "file://artifacts/atoz-construction/public/images/service-interior.png"
+type = "image"
+title = "Premium interior finishes"
+
+[[generated]]
+id = "heejiXI47Z-VlC5ytmcah"
+uri = "file://artifacts/atoz-construction/public/images/about-team.png"
+type = "image"
+title = "Construction managers blueprints"
