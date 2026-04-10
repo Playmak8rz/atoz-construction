@@ -3,7 +3,7 @@ import { Layout } from "@/components/layout/Layout";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
-import { ArrowRight, Building2, Hammer, HardHat, Wrench, PaintBucket, Layers, Home, Bath, UtensilsCrossed, Fence, Ruler, Trash2, LayoutGrid, BrickWall, ClipboardCheck } from "lucide-react";
+import { ArrowRight, PaintBucket, Layers, Fence, Ruler, Trash2, LayoutGrid, ClipboardCheck, Zap, Droplets, Wind } from "lucide-react";
 
 export default function Services() {
   const majorServices = [
@@ -58,7 +58,9 @@ export default function Services() {
     { id: "flooring", title: "Flooring", desc: "Hardwood, tile, marble, epoxy, and engineered flooring installation. Precision subfloor preparation and expert craftsmanship.", icon: LayoutGrid },
     { id: "framing", title: "Framing", desc: "Structural and non-structural framing for new construction and renovations. Metal and wood stud framing to spec.", icon: Ruler },
     { id: "exterior", title: "Exterior Work", desc: "Siding, facades, window installation, waterproofing, and exterior restoration. Protecting NYC buildings from the elements.", icon: Fence },
-    { id: "concrete", title: "Concrete Work", desc: "Foundations, slabs, sidewalks, retaining walls, and decorative concrete. Expert forming, pouring, and finishing.", icon: BrickWall },
+    { id: "electrical", title: "Electrical", desc: "Licensed electrical work including panel upgrades, rewiring, lighting installation, and code-compliant rough-ins for new construction.", icon: Zap },
+    { id: "plumbing", title: "Plumbing", desc: "Full plumbing services from rough-in to finish. Water supply, drainage, fixture installation, and gas line work.", icon: Droplets },
+    { id: "hvac", title: "HVAC Systems", desc: "Heating, ventilation, and air conditioning installation and upgrades. Ductwork, mini-splits, and central system buildouts.", icon: Wind },
     { id: "project-management", title: "Project Management", desc: "End-to-end construction management including scheduling, budgeting, permitting, inspections, and quality control.", icon: ClipboardCheck },
   ];
 
