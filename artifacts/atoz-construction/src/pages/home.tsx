@@ -105,16 +105,21 @@ export default function Home() {
               Premier full-service construction for residential and commercial clients across all five boroughs. We don't just build structures; we build the skyline.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row flex-wrap gap-4">
               <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-white font-bold h-14 px-8 text-lg rounded-sm uppercase tracking-wide w-full sm:w-auto group">
                 <Link href="/contact" data-testid="btn-hero-quote">
                   Request a Quote <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="bg-white/10 hover:bg-white/20 text-white border-white/30 font-bold h-14 px-8 text-lg rounded-sm uppercase tracking-wide w-full sm:w-auto backdrop-blur-sm group">
-                <Link href="/projects" data-testid="btn-hero-projects">
-                  View Projects
+              <Button asChild size="lg" variant="outline" className="bg-white/10 hover:bg-white/20 text-white border-white/30 font-bold h-14 px-8 text-lg rounded-sm uppercase tracking-wide w-full sm:w-auto backdrop-blur-sm">
+                <Link href="/contact?service=consultation" data-testid="btn-hero-consultation">
+                  Schedule Consultation
                 </Link>
+              </Button>
+              <Button asChild size="lg" variant="outline" className="bg-white/10 hover:bg-white/20 text-white border-white/30 font-bold h-14 px-8 text-lg rounded-sm uppercase tracking-wide w-full sm:w-auto backdrop-blur-sm group">
+                <a href="tel:2125550199" data-testid="btn-hero-call">
+                  <PhoneCall className="mr-2 w-5 h-5" /> Call Now
+                </a>
               </Button>
             </div>
           </motion.div>
